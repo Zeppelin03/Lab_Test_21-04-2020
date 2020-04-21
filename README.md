@@ -2,7 +2,7 @@
 
 ### **Desription**
 
+Game engine labs test.
+
 ### **View On Youtube**
 [![YouTube](http://img.youtube.com/vi/uCsGua_8KRo/0.jpg)](https://www.youtube.com/watch?v=uCsGua_8KRo)
-
-https://www.youtube.com/watch?v=uCsGua_8KRo&feature=youtu.be
