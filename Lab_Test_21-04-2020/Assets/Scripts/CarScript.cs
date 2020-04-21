@@ -11,7 +11,7 @@ public class CarScript : MonoBehaviour
     public TrafficLightScript trafficLightScript;
 
     [SerializeField]
-    private Transform target;
+    private Transform targetTrafficLight;
     public List<GameObject> lightGreen;
 
     void Start()
@@ -39,7 +39,7 @@ public class CarScript : MonoBehaviour
                     lightGreen.Add(item);
                 }
 
-                target = lightGreen[0].transform;
+                targetTrafficLight = lightGreen[0].transform;
 
                 if (Vector3.Distance(item.transform.position, this.transform.position) < 1)
                 {
@@ -56,7 +56,7 @@ public class CarScript : MonoBehaviour
 
     void MoveToLight()
     {
-        var desiredVelocity = target.position - transform.position;
+        var desiredVelocity = targetTrafficLight.position - transform.position;
         desiredVelocity = desiredVelocity.normalized * MaxVelocity;
 
         var steering = desiredVelocity - velocity;
@@ -71,6 +71,6 @@ public class CarScript : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawLine(transform.position, target.position);
+        Gizmos.DrawLine(transform.position, targetTrafficLight.position);
     }
 }
